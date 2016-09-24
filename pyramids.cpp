@@ -1,5 +1,6 @@
 #include <iostream>
-//#include "Parser.h"
+#include <stdlib.h>
+#include "Parser.h"
 using namespace std;
 
 void pyramid(string* loc, int levels)
@@ -20,26 +21,26 @@ void pyramid(string* loc, int levels)
 
 int main(int argc, char* argv[])
 {
-  //Parser p;
-  //if(string(argv[1]).compare("-h") == 0)
-  //{
-  //  if(argc > 2)
-  //  {
-  //    cout<<p.getCommandRef(string(argv[2]);
-  //  }
-  //  else
-  //  {
-  //    cout << "Reference";
-  //  }
-  //}
-  //else
-  //{
+  Parser p;
+  if(string(argv[1]).compare("-h") == 0)
+  {
+    if(argc > 2)
+    {
+      cout<<p.getCommandRef(string(argv[2]));
+    }
+    else
+    {
+      cout << "Reference";
+    }
+  }
+  else
+  {
     string pr = "";
     string* prLoc = &pr;
-    int layers = atoi(*argv[1]);
+    int layers = atoi(argv[1]);
     pyramid(prLoc,layers);
     cout<<*prLoc;
-  //}
+  }
   //cout<<p.getCommandRef("nano");
   return 0;
 }
