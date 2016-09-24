@@ -21,11 +21,6 @@ void pyramid(string* loc, int levels)
 
 int main(int argc, char* argv[])
 {
-  if(argc == 0)
-  {
-    cout<<"Error: Please enter a command";
-    return 0;
-  }
   Parser p;
   if(string(argv[1]).compare("-h") == 0)
   {
@@ -46,6 +41,5 @@ int main(int argc, char* argv[])
     pyramid(prLoc,layers);
     cout<<*prLoc;
   }
-  //cout<<p.getCommandRef("nano");
   return 0;
 }
